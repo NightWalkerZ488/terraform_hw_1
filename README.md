@@ -66,8 +66,8 @@
 
 ![validate](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/validate.png)
 
-Итак, resource "docker_image" — отсутствует имя ресурса (должно быть docker_image.nginx), далее
-имя контейнера 1nginx начинается с цифры — недопустимо в Terraform. Также random_password.random_string_FAKE.resulT — опечатки в имени ресурса (_FAKE) и атрибуте (resulT вместо result).
+Итак, "resource "docker_image"" — отсутствует имя ресурса (должно быть docker_image.nginx), далее
+имя контейнера "1nginx" начинается с цифры — недопустимо в Terraform. Также "random_password.random_string_FAKE.resulT" — опечатки в имени ресурса (_FAKE) и атрибуте (resulT вместо result).
 
 ## 5. Исправляем и выполняем код:
 
