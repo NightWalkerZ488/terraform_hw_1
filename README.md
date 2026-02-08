@@ -108,3 +108,9 @@ cat terraform.tfstate
 ```
 
 ![remove](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/tf_final.png)
+
+## 8. Образ nginx:latest не удалился потому, что в ресурсе "docker_image.nginx" установлен параметр "keep_locally = true", так образ не удаляется при выполнении команды "terraform destroy".
+
+![1](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/locally.png)
+
+![2](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/main_tf.png)
