@@ -56,4 +56,10 @@
 
 ## 2. Согласно содержимому файла .gitignore, личную секретную информацию можно хранить в файле personal.auto.tfvars, т.к. он добавлен в игнор.
 
-## 3. 
+## 3. Выполняем код и находим содержимое "random_password":
+
+![run](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/tf_apply.png)
+
+![pass](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/tfstate.png)
+
+## 4. 
