@@ -62,4 +62,30 @@
 
 ![pass](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/tfstate.png)
 
-## 4. 
+## 4. Раскомментируем блок кода и выполним "terraform validate":
+
+![validate](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/validate.png)
+
+Итак, resource "docker_image" — отсутствует имя ресурса (должно быть docker_image.nginx), далее
+имя контейнера 1nginx начинается с цифры — недопустимо в Terraform. Также random_password.random_string_FAKE.resulT — опечатки в имени ресурса (_FAKE) и атрибуте (resulT вместо result).
+
+## 5. Исправляем и выполняем код:
+
+ ```
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "example_${random_password.random_string.result}"
+
+  ports {
+    internal = 80
+    external = 9090
+  }
+}
+```
+
+![run_validate](https://github.com/NightWalkerZ488/terraform_hw_1/blob/main/run_validate.png)
